@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
 from pymongo import MongoClient
+from app import app
 
 # Replace <password> with your actual MongoDB password
 connection_string = "mongodb+srv://tomhua3205:Eg3402945@cluster0.jwjueqf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
