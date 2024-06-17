@@ -4,7 +4,6 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
 from pymongo import MongoClient
-from app import app
 
 # Replace <password> with your actual MongoDB password
 connection_string = "mongodb+srv://tomhua3205:Eg3402945@cluster0.jwjueqf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -290,10 +289,9 @@ fig_PRPi.update_layout(
 
 #_____________________________________________________________________________##
 # Create a Dash app
-app = dash.Dash(__name__, suppress_callback_exceptions=True) server = app.server
+app = dash.Dash(__name__, suppress_callback_exceptions=True)
 # Declare server for Heroku deployment. Needed for Procfile.
-#server = app.server
-#app = dash.Dash(__name__) 
+server = app.server
 
 # Define the layout of the app
 app.layout = html.Div([
