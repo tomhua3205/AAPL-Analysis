@@ -289,9 +289,10 @@ fig_PRPi.update_layout(
 
 #_____________________________________________________________________________##
 # Create a Dash app
-app = dash.Dash(__name__, suppress_callback_exceptions=True)
+app = dash.Dash(__name__, suppress_callback_exceptions=True) server = app.server
 # Declare server for Heroku deployment. Needed for Procfile.
-server = app.server
+#server = app.server
+#app = dash.Dash(__name__) 
 
 # Define the layout of the app
 app.layout = html.Div([
