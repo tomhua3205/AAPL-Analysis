@@ -22,7 +22,7 @@ except Exception as e:
 
 # Connect to the 'Apple' database and the 'AAPL' collection
 db = client['Apple']
-collection = db['AAPL']
+collection = db['AAPL_Update']
 
 # Retrieve all documents from the collection
 data = list(collection.find())
